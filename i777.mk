@@ -83,4 +83,7 @@ PRODUCT_COPY_FILES += \
     	$(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 $(call inherit-product-if-exists, vendor/samsung/i777/i777-vendor.mk)
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+
+# This device supports LiquidSmooth enhanced NFC
+PRODUCT_COPY_FILES += \
+    vendor/liquid/config/permissions/com.liquidsmooth.nfc.enhanced.xml:system/etc/permissions/com.liquidsmooth.nfc.enhanced.xml
